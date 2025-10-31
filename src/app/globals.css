@@ -5,17 +5,55 @@
 
 @layer base {
   :root {
-    --background: 249 250 251;
-    --foreground: 17 24 39;
+    /* Modo claro - Tonos violeta claros y lavanda */
+    --background: 251 219 251; /* #FBDBFB - Rosa muy claro */
+    --foreground: 51 32 99; /* #332063 - Violeta muy oscuro */
+    --card: 212 167 249; /* #D4A7F9 - Lavanda claro */
+    --card-foreground: 51 32 99;
+    --primary: 149 99 222; /* #9563DE - Violeta brillante */
+    --primary-foreground: 255 255 255;
+    --secondary: 153 123 248; /* #997BF8 - Violeta claro brillante */
+    --secondary-foreground: 51 32 99;
+    --accent: 117 89 203; /* #7559CB - Violeta medio */
+    --accent-foreground: 255 255 255;
+    --muted: 212 167 249; /* #D4A7F9 - Lavanda */
+    --muted-foreground: 76 76 156;
+    --border: 153 123 248; /* #997BF8 */
+    --ring: 149 99 222; /* #9563DE */
   }
 
   .dark {
-    --background: 10 10 10;
-    --foreground: 245 245 245;
+    /* Modo oscuro - Tonos violeta oscuros y profundos */
+    --background: 31 19 64; /* #1F1340 - Violeta negro */
+    --foreground: 212 167 249; /* #D4A7F9 - Lavanda claro */
+    --card: 42 26 82; /* #2A1A52 - Violeta ultra oscuro */
+    --card-foreground: 212 167 249;
+    --primary: 94 58 162; /* #5E3AA2 - Violeta oscuro */
+    --primary-foreground: 212 167 249;
+    --secondary: 76 76 156; /* #4C4C9C - Azul violáceo */
+    --secondary-foreground: 212 167 249;
+    --accent: 117 89 203; /* #7559CB - Violeta medio */
+    --accent-foreground: 251 219 251;
+    --muted: 51 32 99; /* #332063 - Violeta muy oscuro */
+    --muted-foreground: 153 123 248;
+    --border: 51 32 99; /* #332063 */
+    --ring: 117 89 203; /* #7559CB */
   }
 
   body {
     @apply bg-[rgb(var(--background))] text-[rgb(var(--foreground))];
+    font-feature-settings: "rlig" 1, "calt" 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  * {
+    @apply border-[rgb(var(--border))];
   }
 }
 
+/* Animaciones suaves para transiciones de tema */
+@layer utilities {
+  .transition-theme {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+}
