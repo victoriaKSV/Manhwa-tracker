@@ -8,7 +8,7 @@ export const mockManhwas: Manhwa[] = [
     descripcion: 'El Rey Grey tiene una fuerza, riqueza y prestigio inigualables, pero la soledad lo persigue. Renace en un mundo de magia y monstruos como Arthur Leywin.',
     portada: 'https://images.unsplash.com/photo-1618336753974-aae8e04506aa?w=400',
     estado: 'leyendo',
-    categorias: ['reencarnación', 'fantasía', 'acción'],
+    categorias: ['Reencarnación', 'Fantasía', 'Acción'],
     capitulos: [
       { id: 'c1-1', numero: 1, titulo: 'Renacimiento', url: '#' },
       { id: 'c1-2', numero: 2, titulo: 'Nueva vida', url: '#' },
@@ -21,7 +21,7 @@ export const mockManhwas: Manhwa[] = [
     descripcion: 'En un mundo donde cazadores luchan contra monstruos, Sung Jinwoo es el más débil. Todo cambia cuando obtiene un poder de "regresión" único.',
     portada: 'https://images.unsplash.com/photo-1578632292335-df3abbb0d586?w=400',
     estado: 'leido',
-    categorias: ['regresión', 'acción', 'fantasía'],
+    categorias: ['Regresión', 'Acción', 'Fantasía'],
     capitulos: [
       { id: 'c2-1', numero: 1, titulo: 'El cazador más débil', url: '#' },
       { id: 'c2-2', numero: 2, titulo: 'Sistema', url: '#' },

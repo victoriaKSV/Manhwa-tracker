@@ -3,3 +3,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: 249 250 251;
+    --foreground: 17 24 39;
+  }
+
+  .dark {
+    --background: 10 10 10;
+    --foreground: 245 245 245;
+  }
+
+  body {
+    @apply bg-[rgb(var(--background))] text-[rgb(var(--foreground))];
+  }
+}
+

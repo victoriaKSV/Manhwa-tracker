@@ -13,11 +13,11 @@ interface ManhwaCardProps {
 export default function ManhwaCard({ manhwa, onEstadoChange }: ManhwaCardProps) {
   const getEstadoColor = (estado: EstadoLectura) => {
     const colores = {
-      leyendo: 'bg-blue-500',
-      leido: 'bg-green-500',
-      pendiente: 'bg-yellow-500',
-      abandonado: 'bg-gray-500',
-      asco: 'bg-red-500',
+      leyendo: 'bg-primary-500 dark:bg-gray-700',
+      leido: 'bg-green-500 dark:bg-green-700',
+      pendiente: 'bg-yellow-500 dark:bg-yellow-700',
+      abandonado: 'bg-gray-500 dark:bg-gray-800',
+      asco: 'bg-red-500 dark:bg-red-700',
     };
     return colores[estado] || 'bg-gray-400';
   };
@@ -34,10 +34,10 @@ export default function ManhwaCard({ manhwa, onEstadoChange }: ManhwaCardProps) 
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+    <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl dark:hover:shadow-gray-900/50 transition-all duration-300 hover:-translate-y-2">
       {/* Portada */}
       <Link href={`/manhwa/${manhwa.id}`}>
-        <div className="relative h-64 bg-gray-200 overflow-hidden">
+        <div className="relative h-64 bg-gray-200 dark:bg-black overflow-hidden">
           <Image
             src={manhwa.portada}
             alt={manhwa.titulo}
@@ -46,7 +46,7 @@ export default function ManhwaCard({ manhwa, onEstadoChange }: ManhwaCardProps) 
           />
           {/* Badge de rating */}
           {manhwa.rating && (
-            <div className="absolute top-2 right-2 bg-yellow-400 text-gray-900 px-2 py-1 rounded-full font-bold text-sm">
+            <div className="absolute top-2 right-2 bg-yellow-400 dark:bg-yellow-600 text-gray-900 dark:text-white px-2 py-1 rounded-full font-bold text-sm">
               ⭐ {manhwa.rating}
             </div>
           )}
@@ -56,12 +56,12 @@ export default function ManhwaCard({ manhwa, onEstadoChange }: ManhwaCardProps) 
       {/* Contenido */}
       <div className="p-4">
         <Link href={`/manhwa/${manhwa.id}`}>
-          <h3 className="font-bold text-lg mb-2 hover:text-purple-600 transition line-clamp-1">
+          <h3 className="font-bold text-lg mb-2 text-gray-900 dark:text-gray-100 hover:text-primary-600 dark:hover:text-gray-300 transition line-clamp-1">
             {manhwa.titulo}
           </h3>
         </Link>
 
-        <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+        <p className="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-2">
           {manhwa.descripcion}
         </p>
 
@@ -70,7 +70,7 @@ export default function ManhwaCard({ manhwa, onEstadoChange }: ManhwaCardProps) 
           {manhwa.categorias.slice(0, 3).map((cat) => (
             <span
               key={cat}
-              className="bg-purple-100 text-purple-700 text-xs px-2 py-1 rounded-full"
+              className="bg-primary-100 dark:bg-gray-800 text-primary-700 dark:text-gray-300 text-xs px-2 py-1 rounded-full border border-transparent dark:border-gray-700"
             >
               {cat}
             </span>
@@ -79,10 +79,10 @@ export default function ManhwaCard({ manhwa, onEstadoChange }: ManhwaCardProps) 
 
         {/* Estado selector */}
         <div className="flex items-center justify-between">
-          <span className="text-sm text-gray-500">
+          <span className="text-sm text-gray-500 dark:text-gray-500">
             {manhwa.capitulos.length} capítulos
           </span>
-          
+
           <select
             value={manhwa.estado}
             onChange={(e) => onEstadoChange?.(manhwa.id, e.target.value as EstadoLectura)}

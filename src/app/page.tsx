@@ -45,14 +45,14 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-sky-100 dark:from-black dark:to-gray-950 transition-colors duration-300">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">
+          <h1 className="text-4xl font-bold text-gray-800 dark:text-gray-100 mb-2">
             Catálogo de Manhwas
           </h1>
-          <p className="text-gray-600">
+          <p className="text-gray-600 dark:text-gray-400">
             Descubre y organiza tus manhwas de reencarnación favoritos
           </p>
         </div>
@@ -64,7 +64,7 @@ export default function Home() {
             placeholder="🔍 Buscar por título o descripción..."
             value={busqueda}
             onChange={(e) => setBusqueda(e.target.value)}
-            className="w-full px-6 py-4 rounded-lg shadow-md border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-lg"
+            className="w-full px-6 py-4 rounded-lg shadow-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-500 focus:ring-2 focus:ring-primary-500 dark:focus:ring-gray-600 focus:border-transparent text-lg"
           />
         </div>
 
@@ -77,7 +77,7 @@ export default function Home() {
         />
 
         {/* Contador de resultados */}
-        <div className="mb-4 text-gray-600">
+        <div className="mb-4 text-gray-600 dark:text-gray-400">
           Mostrando <strong>{manhwasFiltrados.length}</strong> de{' '}
           <strong>{manhwas.length}</strong> manhwas
         </div>
@@ -85,8 +85,8 @@ export default function Home() {
         {/* Grid de manhwas */}
         {manhwasFiltrados.length === 0 ? (
           <div className="text-center py-20">
-            <p className="text-2xl text-gray-400">😕 No se encontraron manhwas</p>
-            <p className="text-gray-500 mt-2">Intenta cambiar los filtros</p>
+            <p className="text-2xl text-gray-400 dark:text-gray-600">😕 No se encontraron manhwas</p>
+            <p className="text-gray-500 dark:text-gray-500 mt-2">Intenta cambiar los filtros</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
