@@ -5,39 +5,43 @@
 
 @layer base {
   :root {
-    /* Modo claro - Tonos violeta claros y lavanda */
-    --background: 251 219 251; /* #FBDBFB - Rosa muy claro */
-    --foreground: 51 32 99; /* #332063 - Violeta muy oscuro */
-    --card: 212 167 249; /* #D4A7F9 - Lavanda claro */
-    --card-foreground: 51 32 99;
-    --primary: 149 99 222; /* #9563DE - Violeta brillante */
-    --primary-foreground: 255 255 255;
-    --secondary: 153 123 248; /* #997BF8 - Violeta claro brillante */
-    --secondary-foreground: 51 32 99;
-    --accent: 117 89 203; /* #7559CB - Violeta medio */
-    --accent-foreground: 255 255 255;
-    --muted: 212 167 249; /* #D4A7F9 - Lavanda */
-    --muted-foreground: 76 76 156;
-    --border: 153 123 248; /* #997BF8 */
-    --ring: 149 99 222; /* #9563DE */
+    /* Modo claro - Paleta Genshin Impact Autumn Whirlwind */
+    --background: 196 220 172; /* #C4DCAC - Verde claro suave */
+    --foreground: 20 61 55; /* #143D37 - Verde oscuro profundo */
+    --card: 255 255 255; /* Blanco para cards */
+    --card-foreground: 20 61 55;
+    --primary: 110 213 182; /* #6ED5B6 - Verde menta brillante */
+    --primary-foreground: 20 61 55;
+    --secondary: 74 162 148; /* #4AA294 - Verde turquesa medio */
+    --secondary-foreground: 255 255 255;
+    --accent: 90 179 172; /* #5AB3AC - Turquesa suave */
+    --accent-foreground: 20 61 55;
+    --muted: 196 220 172; /* #C4DCAC */
+    --muted-foreground: 20 61 55;
+    --border: 74 162 148; /* #4AA294 */
+    --ring: 110 213 182; /* #6ED5B6 */
+    --destructive: 184 98 56; /* #B86238 - Naranja terracota */
+    --warning: 191 126 67; /* #BF7E43 - Naranja cálido */
   }
 
   .dark {
-    /* Modo oscuro - Tonos violeta oscuros y profundos */
-    --background: 31 19 64; /* #1F1340 - Violeta negro */
-    --foreground: 212 167 249; /* #D4A7F9 - Lavanda claro */
-    --card: 42 26 82; /* #2A1A52 - Violeta ultra oscuro */
-    --card-foreground: 212 167 249;
-    --primary: 94 58 162; /* #5E3AA2 - Violeta oscuro */
-    --primary-foreground: 212 167 249;
-    --secondary: 76 76 156; /* #4C4C9C - Azul violáceo */
-    --secondary-foreground: 212 167 249;
-    --accent: 117 89 203; /* #7559CB - Violeta medio */
-    --accent-foreground: 251 219 251;
-    --muted: 51 32 99; /* #332063 - Violeta muy oscuro */
-    --muted-foreground: 153 123 248;
-    --border: 51 32 99; /* #332063 */
-    --ring: 117 89 203; /* #7559CB */
+    /* Modo oscuro - Paleta Genshin Impact Autumn Whirlwind */
+    --background: 20 61 55; /* #143D37 - Verde oscuro profundo */
+    --foreground: 196 220 172; /* #C4DCAC - Verde claro suave */
+    --card: 33 115 106; /* #21736A - Verde turquesa oscuro */
+    --card-foreground: 196 220 172;
+    --primary: 74 162 148; /* #4AA294 - Verde turquesa medio */
+    --primary-foreground: 196 220 172;
+    --secondary: 33 115 106; /* #21736A - Verde turquesa oscuro */
+    --secondary-foreground: 196 220 172;
+    --accent: 41 130 125; /* #29827D - Turquesa oscuro */
+    --accent-foreground: 196 220 172;
+    --muted: 33 115 106; /* #21736A */
+    --muted-foreground: 196 220 172;
+    --border: 33 115 106; /* #21736A */
+    --ring: 74 162 148; /* #4AA294 */
+    --destructive: 118 116 89; /* #767459 - Verde grisáceo */
+    --warning: 184 98 56; /* #B86238 */
   }
 
   body {

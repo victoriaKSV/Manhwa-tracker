@@ -25,11 +25,22 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       : 'light';
     const initialTheme = savedTheme || systemTheme;
     setTheme(initialTheme);
+
+    // Aplicar el tema inmediatamente
+    if (initialTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
   }, []);
 
   useEffect(() => {
     if (mounted) {
-      document.documentElement.classList.toggle('dark', theme === 'dark');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
     }
   }, [theme, mounted]);
 
